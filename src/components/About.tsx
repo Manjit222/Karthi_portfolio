@@ -24,7 +24,7 @@ const TOOLS = [
 
 export function About() {
   return (
-    <section id="about" className="border-t border-white/5">
+    <section id="about">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 pt-20 pb-16 md:grid-cols-2 md:px-10 md:pt-28">
         <div className="flex h-full flex-col items-center justify-end gap-6 md:items-start">
           <img
@@ -85,7 +85,7 @@ export function About() {
         </div>
       </div>
 
-      <div className="border-t border-white/5 bg-[#0d0d0f]">
+      <div className="bg-[#0d0d0f]">
         <div className="mx-auto flex max-w-7xl justify-end px-6 py-10 md:px-10">
           <div className="text-left md:text-right">
             <p className="text-sm text-neutral-400">
