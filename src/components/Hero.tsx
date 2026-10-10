@@ -29,7 +29,10 @@ export function Hero() {
       </div>
 
       <div className="mt-12 flex flex-col gap-10 md:mt-16 md:flex-row md:items-end md:justify-between">
-        <h1 className="max-w-xl text-4xl leading-[1.05] font-extrabold text-white md:text-6xl">
+        <h1
+          className="max-w-xl text-3xl leading-none font-semibold tracking-normal text-white md:text-[48px]"
+          style={{ fontFamily: "'Zalando Sans', sans-serif" }}
+        >
           I DON'T JUST
           <br />
           DESIGN. I SOLVE.
