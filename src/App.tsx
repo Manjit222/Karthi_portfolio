@@ -12,6 +12,7 @@ import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { Navbar } from './components/Navbar'
 import { Skeleton } from './components/Skeleton'
+import { SocialMediaWorks } from './components/SocialMediaWorks'
 import { Works } from './components/Works'
 
 const PRELOAD_IMAGES = [
@@ -49,6 +50,7 @@ function App() {
       <Hero ready={ready} />
       <About />
       <Works />
+      <SocialMediaWorks />
       <Experience />
       <Footer />
     </div>

@@ -50,18 +50,20 @@ export function Works() {
 
       <Reveal variant="up" delay={100}>
         <div className="mt-5 flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#111318] md:flex-row">
-          <a
-            href="https://ahasahealth.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="group block h-64 w-full overflow-hidden md:h-auto md:w-1/2"
-          >
-            <img
-              src={ahasaHealth}
-              alt="AHASA Health"
-              className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-            />
-          </a>
+          <div className="flex w-full p-4 md:w-1/2 md:p-6">
+            <a
+              href="https://ahasahealth.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="group block h-64 w-full overflow-hidden rounded-xl md:h-auto md:flex-1"
+            >
+              <img
+                src={ahasaHealth}
+                alt="AHASA Health"
+                className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              />
+            </a>
+          </div>
           <div className="flex flex-1 flex-col justify-center gap-4 p-8 md:p-12">
             <h3 className="text-2xl font-bold text-white md:text-3xl">
               The Fastest I've <span className="text-emerald-400">Shipped.</span>
