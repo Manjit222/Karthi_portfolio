@@ -15,7 +15,12 @@ export function Works() {
   return (
     <section id="works" className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
       <p className="text-sm text-neutral-400">Featured Works</p>
-      <h2 className="mt-2 text-4xl font-bold text-white md:text-6xl">Live Projects</h2>
+      <h2
+        className="mt-2 text-4xl leading-none font-semibold tracking-normal text-white md:text-[48px]"
+        style={{ fontFamily: "'Zalando Sans', sans-serif" }}
+      >
+        Live Projects
+      </h2>
 
       <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
         {PROJECTS.map((project) => (
