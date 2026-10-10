@@ -1,7 +1,7 @@
 import behance from '../assets/social/behance.svg'
 import instagram from '../assets/social/instagram.svg'
 import linkedin from '../assets/social/linkedin.svg'
-import processDiagram from '../assets/process-diagram.svg'
+import { ProcessDiagram } from './ProcessDiagram'
 import TechText from './TechText'
 
 const SOCIALS = [
@@ -45,12 +45,7 @@ export function Footer() {
       id="contact"
       className="relative overflow-hidden bg-[#0a0a0d] px-6 py-16 md:px-10 md:py-20"
     >
-      <img
-        src={processDiagram}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 right-6 hidden h-[65%] max-h-[360px] -translate-y-1/2 md:right-10 md:block lg:right-24"
-      />
+      <ProcessDiagram className="pointer-events-none absolute top-1/2 right-6 hidden h-[65%] max-h-[360px] -translate-y-1/2 md:right-10 md:block lg:right-24" />
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center md:pr-[280px] lg:pr-[360px]">
         <div
