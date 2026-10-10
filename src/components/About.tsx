@@ -1,4 +1,4 @@
-import karthikeyan from '../assets/karthikeyan-trimmed.png'
+import karthikeyan from '../assets/karthikeyan-card.png'
 import myPhilosophy from '../assets/my-philosophy.svg'
 import adobeFirefly from '../assets/tools/adobe-firefly.svg'
 import adobeXd from '../assets/tools/adobe-xd.svg'
@@ -10,6 +10,7 @@ import figma from '../assets/tools/figma.svg'
 import midjourney from '../assets/tools/midjourney.svg'
 import photoshop from '../assets/tools/photoshop.svg'
 import { CountUp } from './CountUp'
+import Lanyard from './Lanyard'
 import { Marquee } from './Marquee'
 import { Reveal } from './Reveal'
 
@@ -29,24 +30,43 @@ export function About() {
   return (
     <section id="about">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 pt-20 pb-16 md:grid-cols-2 md:px-10 md:pt-28">
-        <div className="flex h-full flex-col items-center justify-end gap-6 md:items-start">
-          <Reveal variant="scale">
-            <div className="relative inline-block">
-              <div className="pointer-events-none absolute top-1/3 left-1/2 -z-10 h-[260px] w-[260px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3B82F6]/20 blur-[100px] md:h-[340px] md:w-[340px]" />
-              <img
-                src={karthikeyan}
-                alt="Karthikeyan"
-                className="h-[320px] w-auto object-contain md:h-[420px] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_58%,rgba(0,0,0,0.85)_70%,rgba(0,0,0,0.45)_82%,rgba(0,0,0,0.12)_93%,transparent_100%)] [mask-image:linear-gradient(to_bottom,black_0%,black_58%,rgba(0,0,0,0.85)_70%,rgba(0,0,0,0.45)_82%,rgba(0,0,0,0.12)_93%,transparent_100%)]"
-              />
+        <div className="flex h-full flex-col justify-end">
+          <div className="relative -ml-6 w-[calc(100%+1.5rem)] md:-ml-10 md:w-[calc(100%+2.5rem)]">
+            <div className="flex flex-col items-center gap-6">
+              <Reveal variant="scale">
+                <div className="relative h-[430px] w-full md:h-[500px]">
+                  <div className="pointer-events-none absolute top-1/3 left-1/2 -z-10 h-[260px] w-[260px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3B82F6]/20 blur-[100px] md:h-[340px] md:w-[340px]" />
+                  <Lanyard
+                    frontImage={karthikeyan}
+                    imageFit="contain"
+                    cardColor="#e4e2e2"
+                    orientation="portrait"
+                    finish="matte"
+                    cornerRadius={0.3}
+                    size={0.62}
+                    anchor="center"
+                    strapLength={0.3}
+                    strapColor="#111111"
+                    strapWidth={0.85}
+                    metal="silver"
+                    gravity={1}
+                    damping={0.5}
+                    elasticity={0.5}
+                    breeze={0.75}
+                    interactive
+                    intro
+                  />
+                </div>
+              </Reveal>
+              <Reveal variant="up" delay={150}>
+                <img
+                  src={myPhilosophy}
+                  alt="My Philosophy — is to tell a story through my work."
+                  className="w-[240px] md:w-[300px]"
+                />
+              </Reveal>
             </div>
-          </Reveal>
-          <Reveal variant="up" delay={150}>
-            <img
-              src={myPhilosophy}
-              alt="My Philosophy — is to tell a story through my work."
-              className="w-[240px] md:w-[300px]"
-            />
-          </Reveal>
+          </div>
         </div>
 
         <div>
