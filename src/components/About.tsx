@@ -82,23 +82,19 @@ export function About() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
 
-      <div className="bg-[#0d0d0f]">
-        <div className="mx-auto flex max-w-7xl justify-end px-6 py-10 md:px-10">
-          <div className="text-left md:text-right">
+          <div className="mt-10">
             <p className="text-sm text-neutral-400">
               I like to keep my designs
             </p>
-            <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1 md:justify-end">
+            <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
               <span className="text-2xl font-bold text-white">Clean</span>
               <span className="text-sm text-neutral-400">with a</span>
               <span className="text-xl font-bold text-white italic line-through decoration-2">
                 SOMETHING
               </span>
             </div>
-            <div className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-1 md:justify-end">
+            <div className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
               <span className="text-2xl font-bold text-white">&amp; Honest</span>
               <span className="text-sm text-neutral-400">mix of</span>
               <span className="text-xl font-bold text-white italic line-through decoration-2">
