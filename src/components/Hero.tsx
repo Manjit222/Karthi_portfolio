@@ -7,7 +7,7 @@ export function Hero() {
         HI, I'M <span className="font-semibold text-white">KARTHIK</span>
       </p>
 
-      <div className="mt-8 h-[220px] overflow-hidden rounded-sm border border-white/10 bg-[#0d0d12] md:h-[300px]">
+      <div className="mt-8 h-[220px] overflow-hidden bg-[#0d0d12] md:h-[300px]">
         <ParticleText
           text="Product Designer"
           particleSize={2.2}
