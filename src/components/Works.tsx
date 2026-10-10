@@ -1,9 +1,9 @@
 import manjitNaskar from '../assets/manjit-naskar.png'
-import ahasaHealth from '../assets/works/ahasa-health.png'
 import allCottonAndLinen from '../assets/works/all-cotton-and-linen.png'
 import spaceMarvelAnalyze from '../assets/works/space-marvel-analyze.png'
 import spaceMarvelProducts from '../assets/works/space-marvel-products.png'
 import travelfika from '../assets/works/travelfika.png'
+import { LiveSitePreview } from './LiveSitePreview'
 
 const PROJECTS = [
   { name: 'Space Marvel — Everything Analyzes Here', image: spaceMarvelAnalyze },
@@ -39,10 +39,10 @@ export function Works() {
       </div>
 
       <div className="mt-5 flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#111318] md:flex-row">
-        <img
-          src={ahasaHealth}
-          alt="AHASA Health"
-          className="h-64 w-full object-cover object-top md:h-auto md:w-1/2"
+        <LiveSitePreview
+          url="https://ahasahealth.com/"
+          title="AHASA Health"
+          className="h-64 w-full md:h-[460px] md:w-1/2"
         />
         <div className="flex flex-1 flex-col justify-center gap-4 p-8 md:p-12">
           <h3 className="text-2xl font-bold text-white md:text-3xl">
