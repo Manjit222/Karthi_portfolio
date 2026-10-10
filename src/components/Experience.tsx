@@ -1,3 +1,6 @@
+import { Reveal } from './Reveal'
+import { RevealWords } from './RevealWords'
+
 const EXPERIENCE = [
   {
     period: 'Sep 2025 - Till now',
@@ -49,61 +52,63 @@ const EXPERIENCE = [
 export function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
-      <h2
-        className="text-4xl leading-none font-semibold tracking-normal text-white md:text-[48px]"
+      <RevealWords
+        text="Where I've Been"
+        className="block text-4xl leading-none font-semibold tracking-normal text-white md:text-[48px]"
         style={{ fontFamily: "'Zalando Sans', sans-serif" }}
-      >
-        Where I've Been
-      </h2>
-      <p
-        className="mt-3 max-w-md text-sm leading-5 font-normal tracking-normal text-neutral-400"
-        style={{ fontFamily: "'Zalando Sans', sans-serif" }}
-      >
-        My Professional journey through different roles and environments
-      </p>
+      />
+      <Reveal variant="up" delay={100}>
+        <p
+          className="mt-3 max-w-md text-sm leading-5 font-normal tracking-normal text-neutral-400"
+          style={{ fontFamily: "'Zalando Sans', sans-serif" }}
+        >
+          My Professional journey through different roles and environments
+        </p>
+      </Reveal>
 
       <div className="mt-16">
         {EXPERIENCE.map((item, index) => (
-          <div
-            key={item.company}
-            className={`grid grid-cols-1 gap-6 py-12 md:grid-cols-4 md:gap-10 ${
-              index !== 0 ? 'border-t border-white/10' : ''
-            }`}
-          >
-            <div>
-              <p className="text-sm text-white">{item.period}</p>
-              <p className="mt-1 text-sm font-medium text-[#3B82F6]">{item.type}</p>
-            </div>
+          <Reveal key={item.company} variant="up" delay={index * 100}>
+            <div
+              className={`grid grid-cols-1 gap-6 py-12 md:grid-cols-4 md:gap-10 ${
+                index !== 0 ? 'border-t border-white/10' : ''
+              }`}
+            >
+              <div>
+                <p className="text-sm text-white">{item.period}</p>
+                <p className="mt-1 text-sm font-medium text-[#3B82F6]">{item.type}</p>
+              </div>
 
-            <div className="md:col-span-3">
-              <h3
-                className="align-middle text-[32px] leading-none font-normal tracking-normal text-white"
-                style={{ fontFamily: "'Oleo Script', cursive" }}
-              >
-                {item.role}
-              </h3>
-              <p
-                className="mt-2 align-middle text-xl leading-7 font-medium tracking-normal text-white"
-                style={{ fontFamily: "'Zalando Sans', sans-serif" }}
-              >
-                {item.company}
-              </p>
-              <p
-                className="mt-4 max-w-2xl text-base leading-8 font-normal tracking-normal text-neutral-400"
-                style={{ fontFamily: "'Zalando Sans', sans-serif" }}
-              >
-                {item.description}
-              </p>
-              <ul className="mt-5 space-y-2">
-                {item.bullets.map((bullet) => (
-                  <li key={bullet} className="flex gap-3 text-neutral-300">
-                    <span className="text-neutral-500">•</span>
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="md:col-span-3">
+                <h3
+                  className="align-middle text-[32px] leading-none font-normal tracking-normal text-white"
+                  style={{ fontFamily: "'Oleo Script', cursive" }}
+                >
+                  {item.role}
+                </h3>
+                <p
+                  className="mt-2 align-middle text-xl leading-7 font-medium tracking-normal text-white"
+                  style={{ fontFamily: "'Zalando Sans', sans-serif" }}
+                >
+                  {item.company}
+                </p>
+                <p
+                  className="mt-4 max-w-2xl text-base leading-8 font-normal tracking-normal text-neutral-400"
+                  style={{ fontFamily: "'Zalando Sans', sans-serif" }}
+                >
+                  {item.description}
+                </p>
+                <ul className="mt-5 space-y-2">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3 text-neutral-300">
+                      <span className="text-neutral-500">•</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

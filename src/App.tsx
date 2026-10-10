@@ -46,7 +46,7 @@ function App() {
     <div className="min-h-screen bg-[#0a0a0d] font-sans text-white">
       <Skeleton visible={!ready} />
       <Navbar />
-      <Hero />
+      <Hero ready={ready} />
       <About />
       <Works />
       <Experience />

@@ -2,6 +2,7 @@ import behance from '../assets/social/behance.svg'
 import instagram from '../assets/social/instagram.svg'
 import linkedin from '../assets/social/linkedin.svg'
 import { ProcessDiagram } from './ProcessDiagram'
+import { Reveal } from './Reveal'
 import TechText from './TechText'
 
 const SOCIALS = [
@@ -76,39 +77,41 @@ export function Footer() {
           />
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:gap-10">
-          <div className="flex items-center gap-3">
-            {SOCIALS.map((social) => (
-              <a
-                key={social.name}
-                href={social.href}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={social.name}
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#16161b] transition-colors hover:bg-[#222228]"
-              >
-                <img src={social.icon} alt="" className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
+        <Reveal variant="up" delay={150}>
+          <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:gap-10">
+            <div className="flex items-center gap-3">
+              {SOCIALS.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={social.name}
+                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#16161b] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#222228]"
+                >
+                  <img src={social.icon} alt="" className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
 
-          <div className="flex flex-col items-center gap-3 text-sm text-neutral-300 sm:items-start">
-            <a
-              href="mailto:Karthikeyan141@gmail.com"
-              className="flex items-center gap-2 transition-colors hover:text-white"
-            >
-              <MailIcon />
-              Karthikeyan141@gmail.com
-            </a>
-            <a
-              href="tel:+919150585719"
-              className="flex items-center gap-2 transition-colors hover:text-white"
-            >
-              <PhoneIcon />
-              +(91) 9150585719
-            </a>
+            <div className="flex flex-col items-center gap-3 text-sm text-neutral-300 sm:items-start">
+              <a
+                href="mailto:Karthikeyan141@gmail.com"
+                className="flex items-center gap-2 transition-colors hover:text-white"
+              >
+                <MailIcon />
+                Karthikeyan141@gmail.com
+              </a>
+              <a
+                href="tel:+919150585719"
+                className="flex items-center gap-2 transition-colors hover:text-white"
+              >
+                <PhoneIcon />
+                +(91) 9150585719
+              </a>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
 
       <p className="relative z-10 mt-20 text-center text-xs text-neutral-500 md:absolute md:bottom-10 md:left-10 md:mt-0 md:text-left">
