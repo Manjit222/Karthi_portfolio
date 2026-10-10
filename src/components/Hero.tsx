@@ -1,4 +1,4 @@
-import { HalftoneText } from './HalftoneText'
+import ParticleText from './ParticleText'
 
 export function Hero() {
   return (
@@ -8,11 +8,23 @@ export function Hero() {
       </p>
 
       <div className="mt-8 h-[220px] overflow-hidden rounded-sm border border-white/10 bg-[#0d0d12] md:h-[300px]">
-        <HalftoneText
+        <ParticleText
           text="Product Designer"
-          className="h-full w-full"
-          colorFrom="#f5f6fa"
-          colorTo="#3b63f6"
+          particleSize={2.2}
+          density={4}
+          color="#f8fafc"
+          highlightColor="#3B82F6"
+          scatter={190}
+          gatherDuration={1600}
+          stagger={420}
+          pointerRepel={42}
+          repelRadius={120}
+          idleDrift={0.8}
+          trigger="mount"
+          fontSize="clamp(3.5rem, 13vw, 9rem)"
+          fontWeight={800}
+          fontFamily="inherit"
+          glow
         />
       </div>
 
