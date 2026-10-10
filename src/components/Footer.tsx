@@ -51,8 +51,11 @@ export function Footer() {
         className="pointer-events-none absolute top-1/2 right-6 hidden h-[85%] max-h-[480px] -translate-y-1/2 md:right-10 md:block lg:right-24"
       />
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center">
-        <h2 className="text-6xl font-extrabold tracking-tight text-white sm:text-7xl md:text-8xl lg:text-9xl">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center md:pr-[280px] lg:pr-[360px]">
+        <h2
+          className="text-6xl leading-none font-normal tracking-normal text-white sm:text-7xl md:text-8xl lg:text-[120px]"
+          style={{ fontFamily: "'Zalando Sans', sans-serif" }}
+        >
           KARTHIKEYAN
         </h2>
 
