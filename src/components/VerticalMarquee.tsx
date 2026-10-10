@@ -16,9 +16,9 @@ export function VerticalMarquee({
   const anim = direction === 'up' ? 'marquee-up' : 'marquee-down'
 
   return (
-    <div className={`overflow-hidden ${className}`}>
+    <div className={`group overflow-hidden ${className}`}>
       <div
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-4 group-hover:![animation-play-state:paused]"
         style={{ animation: `${anim} ${speed}s linear infinite` }}
       >
         <div className="flex flex-col gap-4">{children}</div>
