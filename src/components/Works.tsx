@@ -1,9 +1,9 @@
-import manjitNaskar from '../assets/manjit-naskar.png'
-import ahasaHealth from '../assets/works/ahasa-health.png'
-import allCottonAndLinen from '../assets/works/all-cotton-and-linen.png'
-import spaceMarvelAnalyze from '../assets/works/space-marvel-analyze.png'
-import spaceMarvelProducts from '../assets/works/space-marvel-products.png'
-import travelfika from '../assets/works/travelfika.png'
+import manjitNaskar from '../assets/manjit-naskar.webp'
+import ahasaHealth from '../assets/works/ahasa-health.webp'
+import allCottonAndLinen from '../assets/works/all-cotton-and-linen.webp'
+import spaceMarvelAnalyze from '../assets/works/space-marvel-analyze.webp'
+import spaceMarvelProducts from '../assets/works/space-marvel-products.webp'
+import travelfika from '../assets/works/travelfika.webp'
 import { Reveal } from './Reveal'
 import { RevealWords } from './RevealWords'
 
@@ -39,10 +39,22 @@ export function Works() {
           <Reveal key={project.name} variant="up" delay={index * 100}>
             {project.url ? (
               <a href={project.url} target="_blank" rel="noreferrer" className="block">
-                <img src={project.image} alt={project.name} className="w-full" />
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full"
+                  loading="lazy"
+                  decoding="async"
+                />
               </a>
             ) : (
-              <img src={project.image} alt={project.name} className="w-full" />
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-full"
+                loading="lazy"
+                decoding="async"
+              />
             )}
           </Reveal>
         ))}
@@ -61,6 +73,8 @@ export function Works() {
                 src={ahasaHealth}
                 alt="AHASA Health"
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
             </a>
           </div>
@@ -82,6 +96,8 @@ export function Works() {
                 src={manjitNaskar}
                 alt="Manjit Naskar"
                 className="h-10 w-10 shrink-0 rounded-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <p className="text-sm font-semibold text-white">

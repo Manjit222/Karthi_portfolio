@@ -1,18 +1,20 @@
-import karthikeyan from '../assets/karthikeyan-card.png'
+import { lazy, Suspense } from 'react'
+import karthikeyan from '../assets/karthikeyan-card.webp'
 import myPhilosophy from '../assets/my-philosophy.svg'
 import adobeFirefly from '../assets/tools/adobe-firefly.svg'
 import adobeXd from '../assets/tools/adobe-xd.svg'
-import anima from '../assets/tools/anima.png'
+import anima from '../assets/tools/anima.webp'
 import canva from '../assets/tools/canva.svg'
-import capcut from '../assets/tools/capcut.jpg'
+import capcut from '../assets/tools/capcut.webp'
 import claude from '../assets/tools/claude.svg'
 import figma from '../assets/tools/figma.svg'
 import midjourney from '../assets/tools/midjourney.svg'
 import photoshop from '../assets/tools/photoshop.svg'
 import { CountUp } from './CountUp'
-import Lanyard from './Lanyard'
 import { Marquee } from './Marquee'
 import { Reveal } from './Reveal'
+
+const Lanyard = lazy(() => import('./Lanyard'))
 
 const TOOLS = [
   { name: 'Figma', icon: figma },
@@ -36,26 +38,28 @@ export function About() {
               <Reveal variant="scale">
                 <div className="relative h-[430px] w-full md:h-[500px]">
                   <div className="pointer-events-none absolute top-1/3 left-1/2 -z-10 h-[260px] w-[260px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3B82F6]/20 blur-[100px] md:h-[340px] md:w-[340px]" />
-                  <Lanyard
-                    frontImage={karthikeyan}
-                    imageFit="contain"
-                    cardColor="#e4e2e2"
-                    orientation="portrait"
-                    finish="matte"
-                    cornerRadius={0.3}
-                    size={0.62}
-                    anchor="center"
-                    strapLength={0.3}
-                    strapColor="#111111"
-                    strapWidth={0.85}
-                    metal="silver"
-                    gravity={1}
-                    damping={0.5}
-                    elasticity={0.5}
-                    breeze={0.75}
-                    interactive
-                    intro
-                  />
+                  <Suspense fallback={null}>
+                    <Lanyard
+                      frontImage={karthikeyan}
+                      imageFit="contain"
+                      cardColor="#e4e2e2"
+                      orientation="portrait"
+                      finish="matte"
+                      cornerRadius={0.3}
+                      size={0.62}
+                      anchor="center"
+                      strapLength={0.3}
+                      strapColor="#111111"
+                      strapWidth={0.85}
+                      metal="silver"
+                      gravity={1}
+                      damping={0.5}
+                      elasticity={0.5}
+                      breeze={0.75}
+                      interactive
+                      intro
+                    />
+                  </Suspense>
                 </div>
               </Reveal>
               <Reveal variant="up" delay={150}>
@@ -63,6 +67,8 @@ export function About() {
                   src={myPhilosophy}
                   alt="My Philosophy — is to tell a story through my work."
                   className="w-[240px] md:w-[300px]"
+                  loading="lazy"
+                  decoding="async"
                 />
               </Reveal>
             </div>
@@ -112,6 +118,8 @@ export function About() {
                   alt={tool.name}
                   title={tool.name}
                   className="h-12 w-12 shrink-0 object-contain transition-transform duration-300 hover:-translate-y-1 hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
               ))}
             </Marquee>

@@ -89,7 +89,13 @@ export function Footer() {
                   aria-label={social.name}
                   className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#16161b] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#222228]"
                 >
-                  <img src={social.icon} alt="" className="h-4 w-4" />
+                  <img
+                    src={social.icon}
+                    alt=""
+                    className="h-4 w-4"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </a>
               ))}
             </div>
