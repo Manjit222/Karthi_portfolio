@@ -1,3 +1,4 @@
+import manjitNaskar from '../assets/manjit-naskar.png'
 import ahasaHealth from '../assets/works/ahasa-health.png'
 import allCottonAndLinen from '../assets/works/all-cotton-and-linen.png'
 import spaceMarvelAnalyze from '../assets/works/space-marvel-analyze.png'
@@ -57,9 +58,11 @@ export function Works() {
             "Great products are never built alone."
           </p>
           <div className="flex items-center gap-3 pt-2">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-neutral-700 text-xs font-semibold text-white">
-              MN
-            </div>
+            <img
+              src={manjitNaskar}
+              alt="Manjit Naskar"
+              className="h-10 w-10 shrink-0 rounded-full object-cover"
+            />
             <div>
               <p className="text-sm font-semibold text-white">
                 Manjit Naskar{' '}
