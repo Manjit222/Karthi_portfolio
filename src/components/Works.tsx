@@ -6,8 +6,16 @@ import spaceMarvelProducts from '../assets/works/space-marvel-products.png'
 import travelfika from '../assets/works/travelfika.png'
 
 const PROJECTS = [
-  { name: 'Space Marvel — Everything Analyzes Here', image: spaceMarvelAnalyze },
-  { name: 'Space Marvel — We Turn Ideas Into Products', image: spaceMarvelProducts },
+  {
+    name: 'Space Marvel — Everything Analyzes Here',
+    image: spaceMarvelAnalyze,
+    url: 'https://spacemarvel.com/',
+  },
+  {
+    name: 'Space Marvel — We Turn Ideas Into Products',
+    image: spaceMarvelProducts,
+    url: 'https://spacemarvel.com/services',
+  },
   { name: 'Travelfika', image: travelfika },
   { name: 'All Cotton and Linen', image: allCottonAndLinen },
 ]
@@ -29,21 +37,43 @@ export function Works() {
             key={project.name}
             className="h-[260px] overflow-hidden rounded-2xl border border-white/10 bg-[#111318] md:h-[320px]"
           >
-            <img
-              src={project.image}
-              alt={project.name}
-              className="h-full w-full object-cover object-top"
-            />
+            {project.url ? (
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noreferrer"
+                className="block h-full w-full"
+              >
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="h-full w-full object-cover object-top"
+                />
+              </a>
+            ) : (
+              <img
+                src={project.image}
+                alt={project.name}
+                className="h-full w-full object-cover object-top"
+              />
+            )}
           </div>
         ))}
       </div>
 
       <div className="mt-5 flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#111318] md:flex-row">
-        <img
-          src={ahasaHealth}
-          alt="AHASA Health"
-          className="h-64 w-full object-cover object-top md:h-auto md:w-1/2"
-        />
+        <a
+          href="https://ahasahealth.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="block h-64 w-full md:h-auto md:w-1/2"
+        >
+          <img
+            src={ahasaHealth}
+            alt="AHASA Health"
+            className="h-full w-full object-cover object-top"
+          />
+        </a>
         <div className="flex flex-1 flex-col justify-center gap-4 p-8 md:p-12">
           <h3 className="text-2xl font-bold text-white md:text-3xl">
             The Fastest I've <span className="text-emerald-400">Shipped.</span>
