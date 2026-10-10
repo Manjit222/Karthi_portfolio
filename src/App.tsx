@@ -7,6 +7,7 @@ import spaceMarvelAnalyze from './assets/works/space-marvel-analyze.png'
 import spaceMarvelProducts from './assets/works/space-marvel-products.png'
 import travelfika from './assets/works/travelfika.png'
 import { About } from './components/About'
+import { Experience } from './components/Experience'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { Navbar } from './components/Navbar'
@@ -48,6 +49,7 @@ function App() {
       <Hero />
       <About />
       <Works />
+      <Experience />
       <Footer />
     </div>
   )

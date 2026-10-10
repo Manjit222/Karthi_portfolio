@@ -2,6 +2,7 @@ import behance from '../assets/social/behance.svg'
 import instagram from '../assets/social/instagram.svg'
 import linkedin from '../assets/social/linkedin.svg'
 import processDiagram from '../assets/process-diagram.svg'
+import TechText from './TechText'
 
 const SOCIALS = [
   { name: 'LinkedIn', href: '#', icon: linkedin },
@@ -42,22 +43,43 @@ export function Footer() {
   return (
     <footer
       id="contact"
-      className="relative overflow-hidden bg-[#0a0a0d] px-6 py-24 md:px-10 md:py-32"
+      className="relative overflow-hidden bg-[#0a0a0d] px-6 py-16 md:px-10 md:py-20"
     >
       <img
         src={processDiagram}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 right-6 hidden h-[85%] max-h-[480px] -translate-y-1/2 md:right-10 md:block lg:right-24"
+        className="pointer-events-none absolute top-1/2 right-6 hidden h-[65%] max-h-[360px] -translate-y-1/2 md:right-10 md:block lg:right-24"
       />
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center md:pr-[280px] lg:pr-[360px]">
-        <h2
-          className="text-6xl leading-none font-normal tracking-normal text-white sm:text-7xl md:text-8xl lg:text-[120px]"
+        <div
+          className="h-[140px] w-full sm:h-[160px] md:h-[200px] lg:h-[260px]"
           style={{ fontFamily: "'Zalando Sans', sans-serif" }}
         >
-          KARTHIKEYAN
-        </h2>
+          <TechText
+            text="KARTHIKEYAN"
+            fontWeight={600}
+            fontSize={150}
+            reveal="letter"
+            dashLength={4}
+            dashGap={2}
+            specks={15}
+            fontFamily=""
+            color="#ffffff"
+            accentColor="#ffffff"
+            letterSpacing={-0.05}
+            reach={200}
+            softness={0.7}
+            strokeWidth={1.5}
+            speed={1}
+            lineStyle="dashed"
+            selection
+            labels
+            draggable
+            sweep
+          />
+        </div>
 
         <div className="mt-10 flex flex-col items-center gap-6 sm:flex-row sm:gap-10">
           <div className="flex items-center gap-3">
