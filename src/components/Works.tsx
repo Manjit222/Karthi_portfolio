@@ -65,13 +65,13 @@ export function Works() {
       </div>
 
       <Reveal variant="up" delay={100}>
-        <div className="mt-5 flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#111318] md:flex-row">
-          <div className="flex w-full p-4 md:w-1/2 md:p-6">
+        <div className="mt-5 flex flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#0F0F0F] md:h-[308px] md:flex-row">
+          <div className="flex w-full p-4 md:w-auto md:shrink-0 md:p-6">
             <a
               href="https://ahasahealth.com/"
               target="_blank"
               rel="noreferrer"
-              className="group block h-64 w-full overflow-hidden rounded-xl md:h-auto md:flex-1"
+              className="group block h-64 w-full overflow-hidden rounded-lg md:h-[252px] md:w-[429px] md:flex-none"
             >
               <img
                 src={ahasaHealth}
