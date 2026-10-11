@@ -18,8 +18,12 @@ const PROJECTS = [
     image: spaceMarvelProducts,
     url: 'https://spacemarvel.com/services',
   },
-  { name: 'Travelfika', image: travelfika },
-  { name: 'All Cotton and Linen', image: allCottonAndLinen },
+  { name: 'Travelfika', image: travelfika, url: 'https://www.travelfika.com/' },
+  {
+    name: 'All Cotton and Linen',
+    image: allCottonAndLinen,
+    url: 'https://www.allcottonandlinen.com/',
+  },
 ]
 
 export function Works() {

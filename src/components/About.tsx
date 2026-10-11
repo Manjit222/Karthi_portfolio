@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import karthikeyanBack from '../assets/karthikeyan-card-back.webp'
 import karthikeyan from '../assets/karthikeyan-card-front.webp'
+import designPrinciples from '../assets/design-principles.svg'
 import myPhilosophy from '../assets/my-philosophy.svg'
 import adobeExpress from '../assets/tools/adobe-express.svg'
 import adobeXd from '../assets/tools/adobe-xd.svg'
@@ -128,25 +129,13 @@ export function About() {
           </Reveal>
 
           <Reveal variant="up" delay={100}>
-            <div className="mt-10">
-              <p className="text-sm text-neutral-400">
-                I like to keep my designs
-              </p>
-              <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                <span className="text-2xl font-bold text-white">Clean</span>
-                <span className="text-sm text-neutral-400">with a</span>
-                <span className="text-xl font-bold text-white italic line-through decoration-2">
-                  SOMETHING
-                </span>
-              </div>
-              <div className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                <span className="text-2xl font-bold text-white">&amp; Honest</span>
-                <span className="text-sm text-neutral-400">mix of</span>
-                <span className="text-xl font-bold text-white italic line-through decoration-2">
-                  DIFFERENT
-                </span>
-              </div>
-            </div>
+            <img
+              src={designPrinciples}
+              alt="I like to keep my designs Clean with a SOMETHING & Honest mix of DIFFERENT"
+              className="mt-10 w-[362px] max-w-full"
+              loading="lazy"
+              decoding="async"
+            />
           </Reveal>
         </div>
       </div>
