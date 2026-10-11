@@ -6,9 +6,9 @@ import { Reveal } from './Reveal'
 import TechText from './TechText'
 
 const SOCIALS = [
-  { name: 'LinkedIn', href: '#', icon: linkedin },
-  { name: 'Behance', href: '#', icon: behance },
-  { name: 'Instagram', href: '#', icon: instagram },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/karthik1803/', icon: linkedin },
+  { name: 'Behance', href: 'https://www.behance.net/karthikeyan1803', icon: behance },
+  { name: 'Instagram', href: 'https://www.instagram.com/str_karthi18/?hl=en', icon: instagram },
 ]
 
 function MailIcon() {
@@ -102,11 +102,13 @@ export function Footer() {
 
             <div className="flex flex-col items-center gap-3 text-sm text-neutral-300 sm:items-start">
               <a
-                href="mailto:Karthikeyan141@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=rkarthikeyan141@gmail.com"
+                target="_blank"
+                rel="noreferrer"
                 className="flex items-center gap-2 transition-colors hover:text-white"
               >
                 <MailIcon />
-                Karthikeyan141@gmail.com
+                rkarthikeyan141@gmail.com
               </a>
               <a
                 href="tel:+919150585719"
