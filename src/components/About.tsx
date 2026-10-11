@@ -1,14 +1,15 @@
 import { lazy, Suspense } from 'react'
-import karthikeyan from '../assets/karthikeyan-card.webp'
+import karthikeyanBack from '../assets/karthikeyan-card-back.webp'
+import karthikeyan from '../assets/karthikeyan-card-front.webp'
 import myPhilosophy from '../assets/my-philosophy.svg'
-import adobeFirefly from '../assets/tools/adobe-firefly.svg'
+import adobeExpress from '../assets/tools/adobe-express.svg'
 import adobeXd from '../assets/tools/adobe-xd.svg'
-import anima from '../assets/tools/anima.webp'
 import canva from '../assets/tools/canva.svg'
 import capcut from '../assets/tools/capcut.webp'
 import claude from '../assets/tools/claude.svg'
 import figma from '../assets/tools/figma.svg'
-import midjourney from '../assets/tools/midjourney.svg'
+import googleStitch from '../assets/tools/google-stitch.webp'
+import lovable from '../assets/tools/lovable.webp'
 import photoshop from '../assets/tools/photoshop.svg'
 import { CountUp } from './CountUp'
 import { Marquee } from './Marquee'
@@ -20,12 +21,12 @@ const TOOLS = [
   { name: 'Figma', icon: figma },
   { name: 'Adobe XD', icon: adobeXd },
   { name: 'Photoshop', icon: photoshop },
-  { name: 'Anima', icon: anima },
+  { name: 'Adobe Express', icon: adobeExpress },
   { name: 'Canva', icon: canva },
   { name: 'CapCut', icon: capcut },
   { name: 'Claude', icon: claude },
-  { name: 'Midjourney', icon: midjourney },
-  { name: 'Adobe Firefly', icon: adobeFirefly },
+  { name: 'Google Stitch', icon: googleStitch },
+  { name: 'Lovable', icon: lovable },
 ]
 
 export function About() {
@@ -41,6 +42,7 @@ export function About() {
                   <Suspense fallback={null}>
                     <Lanyard
                       frontImage={karthikeyan}
+                      backImage={karthikeyanBack}
                       imageFit="contain"
                       cardColor="#e4e2e2"
                       orientation="portrait"
